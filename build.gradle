@@ -37,10 +37,11 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-aws-messaging')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.apache.ignite:ignite-core')
-	compile('org.apache.ignite:ignite-spring')
-	compile('org.apache.ignite:ignite-indexing')
-	compile('org.apache.ignite:ignite-slf4j')
+	// https://mvnrepository.com/artifact/org.apache.ignite/ignite-core
+	compile group: 'org.apache.ignite', name: 'ignite-core', version: '2.3.0'
+	compile group: 'org.apache.ignite', name: 'ignite-spring'
+	compile group: 'org.apache.ignite', name: 'ignite-indexing'
+	compile group: 'org.apache.ignite', name: 'ignite-slf4j'
 	runtime('org.hsqldb:hsqldb')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
